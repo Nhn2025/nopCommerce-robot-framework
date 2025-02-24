@@ -33,27 +33,27 @@ Here's an example of what your project directory might look like:
 ```
 RotbotFramework/
 │
-├── Libraries/                            # Custom libraries or reusable code
+├── Libraries/                            
 │
-├── Resources/                            # Resource files such as data, images, etc.
+├── Resources/                            
 │
-├── Results/                              # Folder to store the results of test executions
-│   ├── log.html                          # Log file containing execution details
-│   ├── output.xml                        # XML file with structured test results
-│   └── report.html                       # HTML report summarizing the test results
+├── Results/                              
+│   ├── log.html                          
+│   ├── output.xml                        
+│   └── report.html                       
 │
-├── Tests/                                # Folder for test scripts
-│   ├── eBay/                             # eBay-related test cases
-│   │   ├── FunctionalTestSuite/          # Test suite for eBay functionality
-│   │   │   ├── BasicSearch.robot        # Test script for eBay's basic search functionality
-│   ├── Google/                           # Google-related test cases
-│   │   ├── FunctionalTestSuite/          # Test suite for Google functionality
-│   │   │   ├── GoogleSearch.robot       # Test script for Google's search functionality
-│   └── OrangeHRM/                        # OrangeHRM-related test cases
-│       ├── FunctionalTestSuite/          # Test suite for OrangeHRM functionality
-│       │   ├── HRMLogin.robot           # Test script for HRM login functionality (example)
+├── Tests/                                
+│   ├── eBay/                             
+│   │   ├── FunctionalTestSuite/          
+│   │   │   ├── BasicSearch.robot        
+│   ├── Google/                           
+│   │   ├── FunctionalTestSuite/          
+│   │   │   ├── GoogleSearch.robot      
+│   └── OrangeHRM/                        
+│       ├── FunctionalTestSuite/          
+│       │   ├── HRMLogin.robot           
 │
-└── README.md                             # Project documentation, setup, and instructions
+└── README.md                             
 ```
 
 # Contributing
