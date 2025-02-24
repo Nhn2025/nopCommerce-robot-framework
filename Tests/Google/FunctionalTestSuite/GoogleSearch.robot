@@ -6,7 +6,7 @@ Library     SeleniumLibrary
 *** Test Cases ***
 This is sample test case
     [documentation]  Google test
-    [tags]  regression
+    [tags]  Functional
 
     Open Browser    http://www.google.com   chrome
     Close Browser
