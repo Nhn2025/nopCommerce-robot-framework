@@ -4,7 +4,7 @@ This repository contains tests written in Robot Framework for automating various
 
 # Prerequisites
 Before running the tests, make sure you have the following installed:
-1. Python (3.x or higher)
+1. Python 3.13.2
 2. Robot Framework: You can install Robot Framework via pip:
 ```pip install robotframework```
 3. Other dependencies: Install any additional libraries required for the tests (e.g., Selenium, Requests, etc.). You can list them in the requirements.txt or install them manually.
@@ -31,16 +31,29 @@ You can open these files in a web browser to view the results.
 Here's an example of what your project directory might look like:
 
 ```
-robot-framework-project/
+RotbotFramework/
 │
-├── Tests/
-│   └── exampleTest.robot
+├── Libraries/                            # Custom libraries or reusable code
 │
-├── results/
-│   ├── log.html
-│   └── report.html
+├── Resources/                            # Resource files such as data, images, etc.
 │
-└── README.md
+├── Results/                              # Folder to store the results of test executions
+│   ├── log.html                          # Log file containing execution details
+│   ├── output.xml                        # XML file with structured test results
+│   └── report.html                       # HTML report summarizing the test results
+│
+├── Tests/                                # Folder for test scripts
+│   ├── eBay/                             # eBay-related test cases
+│   │   ├── FunctionalTestSuite/          # Test suite for eBay functionality
+│   │   │   ├── BasicSearch.robot        # Test script for eBay's basic search functionality
+│   ├── Google/                           # Google-related test cases
+│   │   ├── FunctionalTestSuite/          # Test suite for Google functionality
+│   │   │   ├── GoogleSearch.robot       # Test script for Google's search functionality
+│   └── OrangeHRM/                        # OrangeHRM-related test cases
+│       ├── FunctionalTestSuite/          # Test suite for OrangeHRM functionality
+│       │   ├── HRMLogin.robot           # Test script for HRM login functionality (example)
+│
+└── README.md                             # Project documentation, setup, and instructions
 ```
 
 # Contributing
