@@ -1,4 +1,5 @@
 *** Setting ***
+Documentation   Search Functionality
 Library     SeleniumLibrary
 
 *** Variable ***
@@ -8,7 +9,12 @@ This is sample test case
     [documentation]  Google test
     [tags]  Functional
 
-    Open Browser    http://www.google.com   chrome
-    Close Browser
+    Start TestCase
+    Finish TestCase
 
 *** Keywords ***
+Start TestCase
+    Open Browser    http://www.google.com   chrome
+
+Finish TestCase
+    Close Browser
