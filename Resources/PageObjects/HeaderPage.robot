@@ -1,8 +1,12 @@
 *** Settings ***
 Library     SeleniumLibrary
 
+*** Variables ***
+
 *** Keywords ***
-Verify Search Results
+Input Search Text and Click Search
     Input text  xpath://input[@id='gh-ac']    mobile
     Press keys  //button[@id='gh-search-btn']   [RETURN]
-    Page Should Contain    results for mobile
+
+Click on Advanced Search Link
+    Click element   //*[@id='gh-as-a']

@@ -1,9 +1,10 @@
 *** Settings ***
 Documentation   Basic Search Functionality
 Resource  ../../../Resources/CommonFunctionality.robot
-Resource  ../../../Resources/eBay_UserDefinedKeywords.robot
+Resource  ../../../Resources/PageObjects/SearchResultsPage.robot
+Resource  ../../../Resources/PageObjects/HeaderPage.robot
 
-Test Setup  CommonFunctionality.Start TestCase eBay
+Test Setup  CommonFunctionality.Start TestCase
 Test Teardown   CommonFunctionality.Finish TestCase
 
 *** Variables ***
@@ -13,4 +14,5 @@ Verify basic search functionality of eBay
     [Documentation]  This test case verifies the basic search
     [Tags]  Functional
 
-    eBay_UserDefinedKeywords.Verify Search Results
+    HeaderPage.Input Search Text and Click Search
+    SearchResultsPage.Verify Search Results
