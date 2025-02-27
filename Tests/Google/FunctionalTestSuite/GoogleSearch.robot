@@ -1,13 +1,15 @@
-*** Setting ***
+*** Settings ***
 Documentation   Search Functionality
 Resource  ../../../Resources/CommonFunctionality.robot
 
-*** Variable ***
+Test Setup  CommonFunctionality.Start TestCase Google
+Test Teardown   CommonFunctionality.Finish TestCase
+
+*** Variables ***
 
 *** Test Cases ***
 This is sample test case
-    [documentation]  Google test
-    [tags]  Functional
+    [Documentation]  Google test
+    [Tags]  Functional
 
-    Start TestCase Google
-    Finish TestCase
+    Log  "Test is running"
