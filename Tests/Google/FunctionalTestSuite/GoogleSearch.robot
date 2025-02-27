@@ -1,6 +1,6 @@
 *** Setting ***
 Documentation   Search Functionality
-Library     SeleniumLibrary
+Resource  ../../../Resources/CommonFunctionality.robot
 
 *** Variable ***
 
@@ -9,12 +9,5 @@ This is sample test case
     [documentation]  Google test
     [tags]  Functional
 
-    Start TestCase
+    Start TestCase Google
     Finish TestCase
-
-*** Keywords ***
-Start TestCase
-    Open Browser    http://www.google.com   chrome
-
-Finish TestCase
-    Close Browser
