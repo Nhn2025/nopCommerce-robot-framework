@@ -2,7 +2,6 @@
 Library     SeleniumLibrary
 
 *** Variables ***
-@{search_texts}     books   travel  mobile
 ${env}  uat
 &{url}  uat=https://www.ebay.com/
 

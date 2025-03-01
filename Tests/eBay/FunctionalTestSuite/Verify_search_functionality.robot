@@ -14,5 +14,5 @@ Verify basic search functionality of eBay
     [Documentation]  This test case verifies the basic search
     [Tags]  Functional
 
-    HeaderPage.Input Search Text and Click Search
-    SearchResultsPage.Verify Search Results
+    HeaderPage.Input Search Text and Click Search   robot
+    SearchResultsPage.Verify Search Results     results for     robot

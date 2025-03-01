@@ -6,7 +6,8 @@ Resource  ../CommonFunctionality.robot
 
 *** Keywords ***
 Input Search Text and Click Search
-    Input text  xpath://input[@id='gh-ac']     ${search_texts}[1]
+    [Arguments]     ${search_text}
+    Input text  xpath://input[@id='gh-ac']  ${search_text}
     Press keys  //button[@id='gh-search-btn']   [RETURN]
 
 Click on Advanced Search Link
