@@ -2,13 +2,14 @@
 Library     SeleniumLibrary
 
 *** Variables ***
-${env}  uat
-&{url}  uat=https://www.ebay.com/
+${url}  https://www.ebay.com/
+${browser}  chrome
 
 *** Keywords ***
 Start TestCase
-    Open Browser    ${url.${env}}    chrome
+    Open Browser    ${url}  ${browser}
     Maximize Browser Window
+    Sleep   4s
 
 Finish TestCase
     Close Browser
