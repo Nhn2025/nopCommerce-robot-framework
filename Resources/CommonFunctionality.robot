@@ -2,11 +2,9 @@
 Library     SeleniumLibrary
 
 *** Variables ***
-#${search_text}      mobile
-#@{search_texts}     books   travel  gifts   robot
-&{search_texts}     abc=books   def=travel
-${env}  demo
-&{url}  demo=https://www.ebay.com/  uat=https://www.note.com/
+@{search_texts}     books   travel  mobile
+${env}  uat
+&{url}  uat=https://www.ebay.com/
 
 *** Keywords ***
 Start TestCase

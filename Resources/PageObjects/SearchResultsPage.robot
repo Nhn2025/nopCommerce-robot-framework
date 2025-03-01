@@ -7,6 +7,4 @@ ${search_result}   results for
 
 *** Keywords ***
 Verify Search Results
-    Page Should Contain   ${search_result} ${search_texts.abc}
-
-Select product condition
+    Page Should Contain   ${search_result} ${search_texts}[1]
