@@ -3,9 +3,6 @@ Library     SeleniumLibrary
 Variables   ../WebElements.py
 
 *** Variables ***
-${SearchTextbox}    xpath://input[@id='gh-ac']
-${SearchButton}     xpath://button[@id='gh-search-btn']
-${AdvancedSearchLink}   xpath://*[@id='gh-as-a']
 
 *** Keywords ***
 Input Search Text and Click Search
