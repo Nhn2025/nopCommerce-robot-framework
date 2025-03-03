@@ -1,6 +1,5 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource  ../CommonFunctionality.robot
 
 *** Variables ***
 
