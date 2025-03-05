@@ -27,6 +27,9 @@ jobs:
 
       - name: Run Robot Framework Tests
         run: robot -d Results Tests/eBay/FunctionalTestSuite/  #  Chạy test và lưu kết quả vào thư mục Results
+        env:
+          ROBOT_BROWSER: chrome
+          ROBOT_OPTIONS: "--headless --no-sandbox --disable-dev-shm-usage --user-data-dir=/tmp/chrome-profile"
 
       - name: Upload Test Results
         uses: actions/upload-artifact@v4
