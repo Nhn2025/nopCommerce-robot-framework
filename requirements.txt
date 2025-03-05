@@ -1,5 +1,5 @@
 requests==2.32.3
-robotframework==4.1.3
+robotframework==6.0.2  # Cập nhật lên phiên bản mới hơn để hỗ trợ tốt hơn
 robotframework-appiumlibrary==2.1.0
 robotframework-jsonlibrary==0.5
 robotframework-pythonlibcore==4.4.1
@@ -7,4 +7,5 @@ robotframework-seleniumlibrary==6.3.0
 robotframework-tidy==4.0
 rpaframework-core==11.3.3
 rpaframework-recognition==5.2.4
-selenium==4.12
+selenium==4.12.0
+webdriver-manager==4.0.1  # Thêm để tự động tải ChromeDriver trên Windows
