@@ -1,13 +1,13 @@
-name: Run Robot Framework Tests
+name: Run Robot Framework Tests on Windows
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # Cho phép chạy workflow thủ công
   schedule:
-    - cron: '0 17 * * *'
+    - cron: '0 17 * * *'  # Chạy tự động mỗi ngày lúc 17:00 UTC
 
 jobs:
   test:
-    runs-on: macos-latest
+    runs-on: windows-latest  # Chạy trên môi trường Windows
 
     steps:
       - name: Checkout repository
@@ -21,29 +21,36 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          # Install additional dependencies if needed
-          pip install -r requirements.txt
+          pip install -r requirements.txt  # Cài đặt Robot Framework và các thư viện cần thiết
+
+      - name: Install Google Chrome & ChromeDriver
+        run: |
+          choco install googlechrome chromedriver -y
+          echo "Chrome version:"
+          google-chrome --version
+          echo "ChromeDriver version:"
+          chromedriver --version
 
       - name: Run Robot Framework tests
         env:
           WORK_TOKEN: ${{ secrets.GIT_TOKEN }}
           TZ: Asia/Ho_Chi_Minh
         run: |
-          if ! robot --outputdir results --exclude skip tests/; then
+          if (-not (robot --outputdir results --exclude skip Tests/eBay/FunctionalTestSuite/)) {
               echo "Robot Framework tests failed. Rerunning failed tests..."
-              if [ -f results/output.xml ]; then
-                  robot --rerunfailed results/output.xml --outputdir results_rerun tests/ || true
-                  if [ -f results_rerun/output.xml ]; then
+              if (Test-Path results/output.xml) {
+                  robot --rerunfailed results/output.xml --outputdir results_rerun Tests/eBay/FunctionalTestSuite/ || $true
+                  if (Test-Path results_rerun/output.xml) {
                       rebot --output results/output.xml --log results/log.html --report results/report.html --merge results/output.xml results_rerun/output.xml
-                  else
+                  } else {
                       echo "No output.xml file found from rerun. Skipping merge."
-                  fi
-              else
+                  }
+              } else {
                   echo "No output.xml file found. Cannot rerun failed tests."
-              fi
-          fi
-
+              }
+          }
           echo "Script execution completed"
+        shell: pwsh
         continue-on-error: true
 
       - name: Upload artifact
