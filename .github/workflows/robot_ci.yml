@@ -25,32 +25,11 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; else echo "requirements.txt not found"; fi
+          pip install -r requirements.txt
 
-      - name: Install Google Chrome & ChromeDriver
+      - name: Run Robot Framework tests
         run: |
-          choco install googlechrome chromedriver -y
-          echo "Chrome Version:"
-          google-chrome --version
-          echo "ChromeDriver Version:"
-          chromedriver --version
-
-      - name: Run Robot Framework tests with retry
-        run: |
-          echo "Running Robot Framework tests..."
-          if (-not (robot --outputdir Results Tests/eBay/FunctionalTestSuite/)) {
-              echo "Test failed. Retrying failed tests..."
-              if (Test-Path Results/output.xml) {
-                  robot --rerunfailed Results/output.xml --outputdir Results_rerun Tests/eBay/FunctionalTestSuite/
-              }
-          }
-        shell: pwsh
-
-      - name: Merge test results
-        run: |
-          if (Test-Path Results_rerun/output.xml) {
-              rebot --output Results/output.xml --log Results/log.html --report Results/report.html --merge Results/output.xml Results_rerun/output.xml
-          }
+          robot -d Results Tests/eBay/FunctionalTestSuite/
         shell: pwsh
 
       - name: Upload test results
