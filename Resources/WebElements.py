@@ -1,7 +1,4 @@
-#Home Page locators
-
-HomePageSearchTextBox = "xpath://input[@id='gh-ac']"
-HomePageSearchButton = "xpath://button[@id='gh-search-btn']"
-HomePageAdvancedSearchLink = "xpath://*[@id='gh-as-a']"
-
-#Landing page locators
+class HomePageLocators:
+    SEARCH_TEXT_BOX = "xpath://input[@id='gh-ac']"
+    SEARCH_BUTTON = "xpath://button[@id='gh-search-btn']"
+    ADVANCED_SEARCH_LINK = "xpath://*[@id='gh-as-a']"
