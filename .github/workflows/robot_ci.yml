@@ -26,7 +26,7 @@ jobs:
           pip install -r requirements.txt  # Cài đặt Robot Framework và các thư viện cần thiết
 
       - name: Run Robot Framework Tests
-        run: robot -d Results Tests/  # Chạy test và lưu kết quả vào thư mục Results
+        run: robot -d Results Tests/eBay/FunctionalTestSuite  # Chạy test và lưu kết quả vào thư mục Results
 
       - name: Upload Test Results
         uses: actions/upload-artifact@v4
