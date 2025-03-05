@@ -29,7 +29,7 @@ jobs:
         run: robot -d Results Tests/  # Chạy test và lưu kết quả vào thư mục Results
 
       - name: Upload Test Results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: test-results
           path: Results/  # Lưu kết quả test để download từ GitHub Actions
