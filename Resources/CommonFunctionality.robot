@@ -7,8 +7,7 @@ ${browser}  chrome
 
 *** Keywords ***
 Start TestCase
-    ${options}    Evaluate    ['--headless', '--no-sandbox', '--disable-dev-shm-usage', '--user-data-dir=/tmp/chrome-profile']
-    Open Browser  ${url}  ${browser}  options=${options}
+    Open Browser  ${url}  ${browser}  options=add_argument("--headless"), add_argument("--no-sandbox"), add_argument("--disable-dev-shm-usage"), add_argument("--user-data-dir=/tmp/chrome-profile")
 
     Maximize Browser Window
     Sleep   4s
