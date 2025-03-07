@@ -14,3 +14,12 @@ Start TestCase
 
 Finish TestCase
     Close Browser
+
+Load Cookies
+    [Arguments]  ${cookie_file}
+    ${cookies}    Get File   ${cookie_file}
+    ${cookies}    Convert String To JSON    ${cookies}
+    FOR    ${cookie}    IN    @{cookies}
+        Add Cookie    ${cookie}
+    END
+    Refresh Page
