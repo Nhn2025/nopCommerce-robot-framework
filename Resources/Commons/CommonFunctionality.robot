@@ -2,7 +2,8 @@
 Library     SeleniumLibrary
 
 *** Variables ***
-${url}  http://demo.nopcommerce/
+#${url}  http://demo.nopcommerce/
+${url}  https://demo.nopcommerce.com/
 ${browser}  chrome
 
 *** Keywords ***
