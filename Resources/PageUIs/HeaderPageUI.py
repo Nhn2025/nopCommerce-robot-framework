@@ -1,0 +1,1 @@
+REGISTER_LINK = "class:ico-register"

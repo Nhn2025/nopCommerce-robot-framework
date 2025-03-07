@@ -29,7 +29,7 @@ jobs:
 
       - name: Run Robot Framework tests
         run: |
-          robot -d Results Tests/bankGuru/FunctionalTestSuite/
+          robot -d Results Tests/nopCommerce/FunctionalTestSuite/
         shell: pwsh
 
       - name: Upload test results

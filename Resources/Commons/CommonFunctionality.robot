@@ -2,7 +2,7 @@
 Library     SeleniumLibrary
 
 *** Variables ***
-${url}  https://demo.guru99.com/V1/
+${url}  http://demo.nopcommerce
 ${browser}  chrome
 
 *** Keywords ***
