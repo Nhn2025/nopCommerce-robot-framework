@@ -50,15 +50,7 @@ RotbotFramework/
 │   └── report.html                       
 │
 ├── Tests/                                
-│   ├── eBay/                             
-│   │   ├── FunctionalTestSuite/          
-│   │   │   ├── BasicSearch.robot        
-│   ├── Google/                           
-│   │   ├── FunctionalTestSuite/          
-│   │   │   ├── GoogleSearch.robot      
-│   └── OrangeHRM/                        
-│       ├── FunctionalTestSuite/          
-│       │   ├── HRMLogin.robot           
+│   ├── bankGuru     
 │
 └── README.md                             
 ```
