@@ -1,2 +1,2 @@
 *** Variables ***
-${ACCOUNT_USERNAME}     mngr615111
+${ACCOUNT_USERNAME}     m
