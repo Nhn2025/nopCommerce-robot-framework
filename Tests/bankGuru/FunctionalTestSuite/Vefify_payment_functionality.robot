@@ -4,8 +4,8 @@ Resource  ../../../Resources/CommonFunctionality.robot
 Resource  ../../../Resources/PageObjects/SideBarPageObject.robot
 Resource  ../../../Resources/PageObjects/LoginPageObject.robot
 Resource  ../../../Resources/PageObjects/NewCustomerPageObject.robot
-Resource  ../../../Resources/Data/Login/LoginData.robot
-Resource  ../../../Resources/Data/Customer/CustomerData.robot
+Resource  ../../../Resources/Data/LoginData.robot
+Resource  ../../../Resources/Data/CustomerData.robot
 
 Test Setup  CommonFunctionality.Start TestCase
 Test Teardown   CommonFunctionality.Finish TestCase
