@@ -3,7 +3,6 @@ Library     SeleniumLibrary
 
 *** Variables ***
 ${url}  http://demo.nopcommerce/
-
 ${browser}  chrome
 
 *** Keywords ***
