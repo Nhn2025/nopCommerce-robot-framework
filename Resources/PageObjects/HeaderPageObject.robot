@@ -5,5 +5,5 @@ Variables   ../PageUIs/HeaderPageUI.py
 *** Variables ***
 
 *** Keywords ***
-Click to register link
+Click register link
     Click Element   ${REGISTER_LINK}

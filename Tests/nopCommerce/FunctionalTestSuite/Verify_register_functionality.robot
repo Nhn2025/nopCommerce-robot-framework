@@ -10,12 +10,20 @@ Test Teardown   CommonFunctionality.Finish TestCase
 *** Variables ***
 
 *** Test Cases ***
-Verify register with empty data
-    [Documentation]  This test case verifies registration with empty data
+Verify Registration with Empty Data
+    [Documentation]     This test case verifies that registration fails when all required fields are empty
     [Tags]  Functional
 
-    HeaderPageObject.Click to register link
-    RegisterPageObject.Click to register button
-    RegisterPageObject.Verify error messages
+    HeaderPageObject.Click register link
+    RegisterPageObject.Click register button
+    RegisterPageObject.Verify error messages with empty data
 
-#Verify register with
+Verify registration with wrong email format
+    [Documentation]  This test case verifies that registration fails when an invalid email format is entered
+    [Tags]  Functional
+
+    HeaderPageObject.Click register link
+    RegisterPageObject.Fill in all required fields with valid data except email
+    RegisterPageObject.Enter an invalid email format
+    RegisterPageObject.Click register button
+    RegisterPageObject.Verify error message with wrong email format
