@@ -18,4 +18,4 @@ Verify register with empty data
     RegisterPageObject.Click to register button
     RegisterPageObject.Verify error messages
 
-Verify register with
+#Verify register with
