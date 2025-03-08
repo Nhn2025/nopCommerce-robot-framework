@@ -17,3 +17,5 @@ Verify register with empty data
     HeaderPageObject.Click to register link
     RegisterPageObject.Click to register button
     RegisterPageObject.Verify error messages
+
+Verify register with
