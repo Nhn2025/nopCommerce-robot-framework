@@ -38,21 +38,39 @@ You can open these files in a web browser to view the results.
 Here's an example of what your project directory might look like:
 
 ```
-RotbotFramework/
+RobotFramework/
 │
-├── Libraries/                            
+├── .github/
+│   ├── workflows/
+│   │   ├── robot_ci.yml  # File cấu hình GitHub Actions để chạy test tự động
 │
-├── Resources/                            
+├── Libraries/                             
+│
+├── Resources/      
+│   ├── Commons/  
+│   │   ├── CommonFunctionality.robot                      
+│   ├── Data/   
+│   │   ├── RegisterData.robot           
+│   ├── PageObjects/    
+│   │   ├── HeaderPageObject.robot  
+│   │   ├── RegisterPageObject.robot                       
+│   ├── PageUIs/  
+│   │   ├── HeaderPageUI.py  
+│   │   ├── RegisterPageUI.py
 │
 ├── Results/                              
 │   ├── log.html                          
 │   ├── output.xml                        
-│   └── report.html                       
+│   ├── report.html                       
 │
 ├── Tests/                                
-│   ├── bankGuru     
+│   ├── nopCommerce/
+│   │   ├── FunctionalTestSuite/  
+│   │   │   ├── Verify_register_functionality.robot     
 │
-└── README.md                             
+├── README.md          
+├── requirements.txt
+├── run_tests.sh              
 ```
 
 # Contributing
