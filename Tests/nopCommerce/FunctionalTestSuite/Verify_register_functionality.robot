@@ -33,7 +33,7 @@ Verify registration with valid data
     [Documentation]  This test case verifies that registration is successful when multiple sets of valid data are entered
     [Tags]  Functional
 
-    ${VALID_EMAIL}    CommonFunctionality.Generate random email
+    ${VALID_EMAIL}    CommonPageObject.Generate random email
 
     HeaderPageObject.Click register link
     RegisterPageObject.Fill in all required fields    ${FIRST_NAME}   ${LAST_NAME}      ${VALID_EMAIL}    ${PASSWORD}     ${CONFIRM_PASSWORD}
@@ -53,7 +53,7 @@ Verify registration with a password shorter than 6 characters
     [Documentation]  This test case verifies that registration with a password shorter than 6 characters
     [Tags]  Functional
 
-    ${VALID_EMAIL}    CommonFunctionality.Generate random email
+    ${VALID_EMAIL}    CommonPageObject.Generate random email
 
     HeaderPageObject.Click register link
     RegisterPageObject.Fill in all required fields   ${FIRST_NAME}   ${LAST_NAME}   ${VALID_EMAIL}    ${INVALID_PASSWORD}     ${INVALID_CONFIRM_PASSWORD}
@@ -64,7 +64,7 @@ Verify registration when password does not match the confirm password
     [Documentation]  This test case verifies that registration fails when the password does not match the confirm password
     [Tags]  Functional
 
-    ${VALID_EMAIL}    CommonFunctionality.Generate random email
+    ${VALID_EMAIL}    CommonPageObject.Generate random email
 
     HeaderPageObject.Click register link
     RegisterPageObject.Fill in all required fields   ${FIRST_NAME}   ${LAST_NAME}   ${VALID_EMAIL}    ${PASSWORD}     ${NOT_MATCH_CONFIRM_PASSWORD}
