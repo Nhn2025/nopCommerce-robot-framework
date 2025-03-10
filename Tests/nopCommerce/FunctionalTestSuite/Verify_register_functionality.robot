@@ -1,12 +1,13 @@
 *** Settings ***
 Documentation   Register Functionality of NopCommerce
-Resource  ../../../Resources/Commons/CommonFunctionality.robot
+Resource  ../../../Resources/Commons/CommonPageObject.robot
 Resource  ../../../Resources/PageObjects/RegisterPageObject.robot
 Resource  ../../../Resources/PageObjects/HeaderPageObject.robot
 Resource  ../../../Resources/Data/RegisterData.robot
+Resource  ../../../Resources/Data/CommonData.robot
 
-Test Setup  CommonFunctionality.Start TestCase
-Test Teardown   CommonFunctionality.Finish TestCase
+Test Setup  CommonPageObject.Start TestCase
+Test Teardown   CommonPageObject.Finish TestCase
 
 *** Variables ***
 

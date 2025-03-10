@@ -7,3 +7,6 @@ Variables   ../PageUIs/HeaderPageUI.py
 *** Keywords ***
 Click register link
     Click Element   ${REGISTER_LINK}
+
+Click login link
+    Click Element   ${LOGIN_LINK}

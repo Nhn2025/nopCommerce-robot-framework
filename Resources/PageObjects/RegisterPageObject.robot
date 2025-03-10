@@ -1,6 +1,7 @@
 *** Settings ***
 Library     SeleniumLibrary
 Variables   ../PageUIs/RegisterPageUI.py
+Variables   ../PageUIs/CommonPageUI.py
 Resource    ../Data/RegisterData.robot
 
 *** Variables ***

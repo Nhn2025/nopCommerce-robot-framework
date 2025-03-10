@@ -7,8 +7,6 @@ PASSWORD_INVALID_MESSAGE_LOCATOR = "xpath=//span[@class='field-validation-error'
 
 FIRST_NAME_TEXTBOX_LOCATOR = "xpath=//input[@id='FirstName']"
 LAST_NAME_TEXTBOX_LOCATOR = "xpath=//input[@id='LastName']"
-EMAIL_TEXTBOX_LOCATOR = "xpath=//input[@id='Email']"
-PASSWORD_TEXTBOX_LOCATOR = "xpath=//input[@id='Password']"
 CONFIRM_PASSWORD_TEXTBOX_LOCATOR = "xpath=//input[@id='ConfirmPassword']"
 
 SUCCESS_REGISTER_TEXT_LOCATOR = "class:result"
