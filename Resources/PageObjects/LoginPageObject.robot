@@ -25,7 +25,7 @@ Input email and password
         Input text  ${LOCATOR}  ${DATA}
     END
 
-Verify error message when logging with invalid password
+Verify multiple error messages
     [Arguments]      ${INVALID_LOGIN_TEXT_1}    ${INVALID_LOGIN_TEXT_2}
     ${ACTUAL_TEXT}=     Get text    ${INVALID_LOGIN_MESSAGE_LOCATOR}
     Should Contain   ${ACTUAL_TEXT}      ${INVALID_LOGIN_TEXT_1}
