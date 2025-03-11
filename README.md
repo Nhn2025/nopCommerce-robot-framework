@@ -9,12 +9,12 @@ Before running the tests, make sure you have the following installed:
 ```pip install robotframework```
 3. Other dependencies: Install any additional libraries required for the tests (e.g., Selenium, Requests, etc.). You can list them in the requirements.txt or install them manually.
 ```pip install robotframework-seleniumlibrary```
-4. VS Code Extension: IntelliBot (for better support in writing Robot Framework test cases in VS Code)
-  - Open VS Code
+4. PyCharm Extension: IntelliBot (for better support in writing Robot Framework test cases in VS Code)
+  - Open PyCharm
   - Go to Extensions (Ctrl+Shift+X)
   - Search for IntelliBot @robotframework
   - Install the extension
-  - Restart VS Code if necessary
+  - Restart PyCharm if necessary
 
 # Running the Tests
 To run the tests, use the following command:
