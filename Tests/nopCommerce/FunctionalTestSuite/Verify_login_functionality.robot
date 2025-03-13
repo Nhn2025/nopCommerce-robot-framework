@@ -61,4 +61,4 @@ Vefify Login with a valid email and password
     HeaderPageObject.Click login link
     LoginPageObject.Input email and password    ${EMAIL_LOGIN}      ${VALID_PASSWORD_LOGIN}
     LoginPageObject.Click login button
-    HomePageObject.Verify login page redirects to home page     ${MY_ACCOUNT_TEXT}
+    HomePageObject.Verify login page redirects to home page     ${LOG_OUT_TEXT}

@@ -7,5 +7,5 @@ Variables   ../PageUIs/CommonPageUI.py
 
 *** Keywords ***
 Verify login page redirects to home page
-    [Arguments]  ${MY_ACCOUNT_TEXT}
-    Page Should Contain   ${MY_ACCOUNT_TEXT}
+    [Arguments]  ${LOG_OUT_TEXT}
+    Page Should Contain   ${LOG_OUT_TEXT}

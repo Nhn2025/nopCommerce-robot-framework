@@ -1,0 +1,5 @@
+OLD_PASSWORD_TEXTBOX = "id:OldPassword"
+NEW_PASSWORD_TEXTBOX = "id:NewPassword"
+CONFIRM_PASSWORD_TEXTBOX = "id:ConfirmNewPassword"
+SAVE_CHANGE_PASSWORD_BUTTON = "class:change-password-button"
+CLOSE_BUTTON    =   "class:close"

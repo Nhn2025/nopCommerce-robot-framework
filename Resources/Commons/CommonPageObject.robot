@@ -2,6 +2,8 @@
 Library    SeleniumLibrary
 Library    BuiltIn
 Library    random
+Library     OperatingSystem
+Variables   ../PageUIs/CommonPageUI.py
 
 *** Variables ***
 ${url}  http://demo.nopcommerce/
