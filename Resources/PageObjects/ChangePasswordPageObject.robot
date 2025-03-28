@@ -21,4 +21,5 @@ Click change password button
     Click Element   ${SAVE_CHANGE_PASSWORD_BUTTON}
 
 Click close button
+    Wait Until Element Is Visible    ${CLOSE_BUTTON}    timeout=2s
     Click Element   ${CLOSE_BUTTON}

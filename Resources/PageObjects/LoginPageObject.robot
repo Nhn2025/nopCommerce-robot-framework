@@ -30,6 +30,7 @@ Input email and password
 
 Verify multiple error messages
     [Arguments]      ${INVALID_LOGIN_TEXT_1}    ${INVALID_LOGIN_TEXT_2}
+    Wait Until Element Is Visible    ${INVALID_LOGIN_MESSAGE_LOCATOR}    timeout=2s
     ${ACTUAL_TEXT}=     Get text    ${INVALID_LOGIN_MESSAGE_LOCATOR}
     Should Contain   ${ACTUAL_TEXT}      ${INVALID_LOGIN_TEXT_1}
     Should Contain   ${ACTUAL_TEXT}      ${INVALID_LOGIN_TEXT_2}

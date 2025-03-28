@@ -41,12 +41,14 @@ Fill in all required fields
 
 Verify error message with invalid email
     [Arguments]  ${EMAIL_ERROR_MESSAGE_LOCATOR}     ${EMAIL_INVALID_TEXT}
+    Wait Until Element Is Visible    ${EMAIL_ERROR_MESSAGE_LOCATOR}    timeout=2s
     ${ACTUAL_TEXT}=     Get text    ${EMAIL_ERROR_MESSAGE_LOCATOR}
     ${EXPECTED_TEXT}=   Evaluate    "${EMAIL_INVALID_TEXT}".strip()
     Should Be Equal As Strings   ${ACTUAL_TEXT}      ${EXPECTED_TEXT}
 
 Verify success message with valid data
     [Arguments]  ${SUCCESS_REGISTER_MESSAGE}
+    Wait Until Element Is Visible    ${SUCCESS_REGISTER_TEXT_LOCATOR}    timeout=2s
     ${ACTUAL_TEXT}=     Get text    ${SUCCESS_REGISTER_TEXT_LOCATOR}
     ${EXPECTED_TEXT}=   Evaluate    "${SUCCESS_REGISTER_MESSAGE}".strip()
     Should Be Equal As Strings   ${ACTUAL_TEXT}      ${EXPECTED_TEXT}
