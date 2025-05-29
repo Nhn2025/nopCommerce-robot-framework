@@ -55,6 +55,7 @@ Verify that user can change password
     [Documentation]     This test case verifies that password is changed successfully
     [Tags]  Functional
 
+
     ${EMAIL_LOGIN}     RegisterPageObject.Register     ${FIRST_NAME}   ${LAST_NAME}    ${PASSWORD}     ${CONFIRM_PASSWORD}     ${SUCCESS_REGISTER_TEXT}
 
     HeaderPageObject.Click my account link
