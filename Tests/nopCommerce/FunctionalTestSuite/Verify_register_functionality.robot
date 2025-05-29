@@ -12,7 +12,7 @@ Test Teardown   CommonPageObject.Finish TestCase
 *** Variables ***
 
 *** Test Cases ***
-Verify Registration with Empty Data
+Verify that user cannot register with empty input fields
     [Documentation]     This test case verifies that registration fails when all required fields are empty
     [Tags]  Functional
 
@@ -20,7 +20,7 @@ Verify Registration with Empty Data
     RegisterPageObject.Click register button
     RegisterPageObject.Verify error messages with empty data    ${FIRST_NAME_REQUIRED_TEXT}    ${LAST_NAME_REQUIRED_TEXT}    ${EMAIL_REQUIRED_TEXT}    ${PASSWORD_REQUIRED_TEXT}
 
-Verify registration with wrong email format
+Verify that user cannot register with an invalid email format
     [Documentation]  This test case verifies that registration fails when an invalid email format is entered
     [Tags]  Functional
 
@@ -29,7 +29,7 @@ Verify registration with wrong email format
     RegisterPageObject.Click register button
     RegisterPageObject.Verify error message with invalid email    ${EMAIL_ERROR_MESSAGE_LOCATOR}   ${EMAIL_INVALID_TEXT}
 
-Verify registration with valid data
+Verify that user can successfully register with valid data
     [Documentation]  This test case verifies that registration is successful when multiple sets of valid data are entered
     [Tags]  Functional
 
@@ -40,7 +40,7 @@ Verify registration with valid data
     RegisterPageObject.Click register button
     RegisterPageObject.Verify success message with valid data   ${SUCCESS_REGISTER_TEXT}
 
-Verify registration with existing email
+Verify that user cannot register with an email that is already registered
     [Documentation]  This test case verifies that registration fails when an existing email is entered
     [Tags]  Functional
 
@@ -49,7 +49,7 @@ Verify registration with existing email
     RegisterPageObject.Click register button
     RegisterPageObject.Verify error message with invalid email  ${EXISTING_EMAIL_MESSAGE_LOCATOR}  ${EMAIL_EXISTING_TEXT}
 
-Verify registration with a password shorter than 6 characters
+Verify that user cannot register with a password shorter than 6 characters
     [Documentation]  This test case verifies that registration with a password shorter than 6 characters
     [Tags]  Functional
 
@@ -60,7 +60,7 @@ Verify registration with a password shorter than 6 characters
     RegisterPageObject.Click register button
     RegisterPageObject.Verify error message with a password shorter than 6 characters     ${INVALID_PASSWORD_TEXT}
 
-Verify registration when password does not match the confirm password
+Verify that user cannot register when password and confirm password do not match
     [Documentation]  This test case verifies that registration fails when the password does not match the confirm password
     [Tags]  Functional
 

@@ -18,7 +18,7 @@ Test Teardown   CommonPageObject.Finish TestCase
 *** Variables ***
 
 *** Test Cases ***
-Verify update information of customer
+Verify that user can update their information
     [Documentation]     This test case verifies that update infomation of customer
     [Tags]  Functional
 
@@ -32,7 +32,7 @@ Verify update information of customer
     CustomerInfoPageObject.Click save button
     CustomerInfoPageObject.Verify updated information is successfully saved     ${GENDER_UPDATE}   ${FIRST_NAME_UPDATE}   ${LAST_NAME_UPDATE}    ${VALID_EMAIL}    ${COMPANY_UPDATE}
 
-Verify adding customer address
+Verify that user can add a new address
     [Documentation]     This test case verifies that a customer address is added successfully
     [Tags]  Functional
 
@@ -51,7 +51,7 @@ Verify adding customer address
     ...     ${COMPANY_ADDRESS}  ${COUNTRY_ADDRESS}      ${PROVINCE_ADDRESS}
     ...     ${CITY_ADDRESS}   ${ADDRESS_1}     ${ADDRESS_2}     ${ZIP_ADDRESS}     ${PHONE_ADDRESS}     ${FAX_NAME_ADDRESS}
 
-Verify change password of customer
+Verify that user can change password
     [Documentation]     This test case verifies that password is changed successfully
     [Tags]  Functional
 

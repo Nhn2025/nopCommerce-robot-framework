@@ -13,14 +13,14 @@ Test Teardown   CommonPageObject.Finish TestCase
 *** Variables ***
 
 *** Test Cases ***
-Verify Login with Empty Data
+Verify that user cannot log in with empty credentials
     [Documentation]     This test case verifies that the login fails when using empty data
     [Tags]  Functional
     HeaderPageObject.Click login link
     LoginPageObject.Click login button
     LoginPageObject.Verify error message     ${EMAIL_LOGIN_REQUIRED_TEXT}
 
-Verify Login with Invalid Email
+Verify that user cannot log in with a valid email and invalid password
     [Documentation]    This test case verifies that the login fails when using an invalid email
     [Tags]  Functional
     HeaderPageObject.Click login link
@@ -28,7 +28,7 @@ Verify Login with Invalid Email
     LoginPageObject.Click login button
     LoginPageObject.Verify error message      ${EMAIL_INVALID_TEXT}
 
-Vefify Login with an already registered email and an invalid password
+Verify that user cannot log in with an invalid email format
     [Documentation]     This test case verifies that login fails when using an already registered email and an invalid password
     [Tags]  Functional
     HeaderPageObject.Click login link
@@ -36,7 +36,7 @@ Vefify Login with an already registered email and an invalid password
     LoginPageObject.Click login button
     LoginPageObject.Verify multiple error messages    ${INVALID_LOGIN_TEXT_1}    ${INVALID_LOGIN_TEXT_2}
 
-Verify Login with ungistered email
+Verify that user cannot log in with an unregistered email
     [Documentation]     This test case verifies that login fails when using an unregistered email
     [Tags]  Functional
 
@@ -55,7 +55,7 @@ Vefify Login with an already registered email and empty password
     LoginPageObject.Click login button
     LoginPageObject.Verify multiple error messages    ${INVALID_LOGIN_TEXT_1}    ${INVALID_LOGIN_TEXT_2}
 
-Vefify Login with a valid email and password
+Verify that user can log in with valid email and password
     [Documentation]     This test case verifies that login is successful when using a valid email and password
     [Tags]  Functional
     HeaderPageObject.Click login link
