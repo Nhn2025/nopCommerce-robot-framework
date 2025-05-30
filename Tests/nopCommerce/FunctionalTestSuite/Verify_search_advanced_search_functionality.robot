@@ -1,0 +1,40 @@
+*** Settings ***
+Documentation   Search/ Search Advanced Functionality of NopCommerce
+Resource  ../../../Resources/Commons/CommonPageObject.robot
+Resource  ../../../Resources/Data/CommonData.robot
+Resource  ../../../Resources/Data/LoginData.robot
+Resource  ../../../Resources/Data/ProductsData.robot
+Resource  ../../../Resources/PageObjects/SearchPageObject.robot
+
+Test Setup  SearchPageObject.Start test cases   ${EMAIL_LOGIN}      ${VALID_PASSWORD_LOGIN}
+Test Teardown   CommonPageObject.Finish TestCase
+
+*** Variables ***
+
+*** Test Cases ***
+Verify that user can not search with empty data
+    [Documentation]     This test case verifies that user can not search with empty data
+    [Tags]  Functional
+    SearchPageObject.Click search button
+    SearchPageObject.Verify error message  ${EMPTY_KEYWORD_MESSAGE}
+
+Verify that user can not search with invalid data
+    [Documentation]     This test case verifies that user can not search with invalid data
+    [Tags]  Functional
+    SearchPageObject.Enter keyword in search field   ${INVALID_KEYWORD}
+    SearchPageObject.Click search button
+    SearchPageObject.Verify error message       ${NOT_FOUND_KEYWORD_MESSAGE}
+
+Verify that the user can search using partial keyword
+    [Documentation]     This test case verifies that user can search using partial keyword
+    [Tags]  Functional
+    SearchPageObject.Enter keyword in search field   ${PARTIAL_KEYWORD}
+    SearchPageObject.Click search button
+    SearchPageObject.Verify that the product is displayed       ${PARTIAL_PRODUCT_1}      ${PARTIAL_PRODUCT_2}
+
+Verify that the user can search using exact keywords
+    [Documentation]     This test case verifies that user can search using exact keywords
+    [Tags]  Functional
+    SearchPageObject.Enter keyword in search field   ${EXACT_KEYWORD}
+    SearchPageObject.Click search button
+    SearchPageObject.Verify that the product is displayed       ${EXACT_PRODUCT}        ${EMPTY}

@@ -37,17 +37,19 @@ Verify multiple error messages
 
 Verify successful login with valid data
     [Arguments]     ${EMAIL_LOGIN}      ${VALID_PASSWORD_LOGIN}     ${LOG_OUT_TEXT}
-    HeaderPageObject.Click login link
-    Input email and password    ${EMAIL_LOGIN}      ${VALID_PASSWORD_LOGIN}
+    Login with email and password    ${EMAIL_LOGIN}      ${VALID_PASSWORD_LOGIN}
 
-    Click login button
     HomePageObject.Verify login page redirects to home page     ${LOG_OUT_TEXT}
 
 Verify login fail with wrong password
     [Arguments]     ${EMAIL_LOGIN}      ${INVALID_PASSWORD_LOGIN}   ${INVALID_LOGIN_TEXT_1}
     ...     ${INVALID_LOGIN_TEXT_2}
 
-    HeaderPageObject.Click login link
-    Input email and password    ${EMAIL_LOGIN}      ${INVALID_PASSWORD_LOGIN}
-    Click login button
+    Login with email and password    ${EMAIL_LOGIN}      ${INVALID_PASSWORD_LOGIN}
     Verify multiple error messages    ${INVALID_LOGIN_TEXT_1}    ${INVALID_LOGIN_TEXT_2}
+
+Login with email and password
+    [Arguments]     ${EMAIL_LOGIN}      ${PASSWORD_LOGIN}
+    HeaderPageObject.Click login link
+    Input email and password    ${EMAIL_LOGIN}      ${PASSWORD_LOGIN}
+    Click login button

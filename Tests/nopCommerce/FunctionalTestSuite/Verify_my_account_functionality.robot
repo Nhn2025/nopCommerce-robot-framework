@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   Login Functionality of NopCommerce
+Documentation   My Account Functionality of NopCommerce
 Resource  ../../../Resources/Commons/CommonPageObject.robot
 Resource  ../../../Resources/PageObjects/HeaderPageObject.robot
 Resource  ../../../Resources/PageObjects/LoginPageObject.robot
@@ -9,10 +9,14 @@ Resource  ../../../Resources/PageObjects/MyAcountSideBarPageObject.robot
 Resource  ../../../Resources/PageObjects/CustomerInfoPageObject.robot
 Resource  ../../../Resources/PageObjects/AddressesPageObject.robot
 Resource  ../../../Resources/PageObjects/ChangePasswordPageObject.robot
+Resource  ../../../Resources/PageObjects/NewProductsPageObject.robot
+Resource  ../../../Resources/PageObjects/ProductsDetailPageObject.robot
 Resource  ../../../Resources/Data/LoginData.robot
 Resource  ../../../Resources/Data/MyAccountData.robot
+Resource  ../../../Resources/Data/ProductsData.robot
 Resource  ../../../Resources/Data/CommonData.robot
 
+Test Setup  CommonPageObject.Start TestCase
 Test Teardown   CommonPageObject.Finish TestCase
 
 *** Variables ***
@@ -55,7 +59,6 @@ Verify that user can change password
     [Documentation]     This test case verifies that password is changed successfully
     [Tags]  Functional
 
-
     ${EMAIL_LOGIN}     RegisterPageObject.Register     ${FIRST_NAME}   ${LAST_NAME}    ${PASSWORD}     ${CONFIRM_PASSWORD}     ${SUCCESS_REGISTER_TEXT}
 
     HeaderPageObject.Click my account link
@@ -69,3 +72,16 @@ Verify that user can change password
     HeaderPageObject.Click log out link
     LoginPageObject.Verify login fail with wrong password       ${EMAIL_LOGIN}      ${PASSWORD}   ${INVALID_LOGIN_TEXT_1}
     ...     ${INVALID_LOGIN_TEXT_2}
+
+Verify that user can add a review on product page
+    [Documentation]     This test case verifies that user can add a review on product page successfully
+    [Tags]  Functional
+
+    LoginPageObject.Login with email and password    ${EMAIL_LOGIN}      ${VALID_PASSWORD_LOGIN}
+
+    HeaderPageObject.Click new products link
+
+    NewProductsPageObject.Select a product
+    ProductsDetailPageObject.Add a review       ${REVIEW_TITLE}    ${REVIEW_TEXT}
+    ProductsDetailPageObject.Click submit review button
+    ProductsDetailPageObject.Verify a review is added       ${ADD_REVIEW_SUCCESS_TEXT}     ${REVIEW_TITLE}    ${REVIEW_TEXT}

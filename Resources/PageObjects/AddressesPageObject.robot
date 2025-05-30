@@ -33,7 +33,6 @@ Input address information
         Input text  ${TEXTBOX_FIELD}  ${VALUE}
     END
 
-
 Verify updated address information is successfully saved
     [Arguments]     ${FIRST_NAME_ADDRESS}   ${LAST_NAME_ADDRESS}    ${VALID_EMAIL}
     ...     ${COMPANY_ADDRESS}  ${COUNTRY_ADDRESS}  ${PROVINCE_ADDRESS}    ${CITY_ADDRESS}
