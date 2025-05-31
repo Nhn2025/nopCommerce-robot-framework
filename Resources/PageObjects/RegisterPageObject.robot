@@ -55,9 +55,10 @@ Verify success message with valid data
 
 Verify error message with a password shorter than 6 characters
     [Arguments]     ${INVALID_PASSWORD_TEXT}
-    ${ACTUAL_TEXT}=     Get text    ${PASSWORD_INVALID_MESSAGE_LOCATOR}
+    Wait Until Element Is Visible    ${PASSWORD_INVALID_MESSAGE_LOCATOR}    timeout=5s
+    ${ACTUAL_TEXT}=     Get Text    ${PASSWORD_INVALID_MESSAGE_LOCATOR}
     ${EXPECTED_TEXT}=   Evaluate    "${INVALID_PASSWORD_TEXT}".strip()
-    Should Be Equal As Strings   ${ACTUAL_TEXT}      ${EXPECTED_TEXT}
+    Should Be Equal As Strings    ${ACTUAL_TEXT}    ${EXPECTED_TEXT}
 
 Verify error message with a password does not match the confirm password
     [Arguments]     ${NOT_MATCH_CONFIRM_PASSWORD_TEXT}
