@@ -27,8 +27,9 @@ Verify error empty message
 
 Verify error invalid message
     [Arguments]     ${SEARCH_MESSAGE}
+    Wait Until Element Is Visible    ${NO_RESULT_MESSAGE_LOCATOR}    10s
     Scroll Element Into View    ${NO_RESULT_MESSAGE_LOCATOR}
-    Wait Until Element Is Visible    ${NO_RESULT_MESSAGE_LOCATOR}    5s
+    Element Should Be Visible    ${NO_RESULT_MESSAGE_LOCATOR}
     Page Should Contain     ${SEARCH_MESSAGE}
 
 Enter keyword in search field
