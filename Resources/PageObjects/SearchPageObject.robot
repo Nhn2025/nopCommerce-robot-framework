@@ -38,5 +38,3 @@ Verify that the product is displayed
     [Arguments]     ${PRODUCT_1}     ${PRODUCT_2}
     Wait Until Page Contains    ${PRODUCT_1}        5s
     Page Should Contain     ${PRODUCT_1}        ${PRODUCT_2}
-
-

@@ -26,5 +26,7 @@ Click submit review button
 
 Verify a review is added
     [Arguments]      ${ADD_REVIEW_SUCCESS_TEXT}     ${REVIEW_TITLE}    ${REVIEW_TEXT}
-    Page Should Contain     ${ADD_REVIEW_SUCCESS_TEXT}      ${REVIEW_TITLE}
-    Page Should Contain    ${REVIEW_TEXT}
+    Wait Until Page Contains    ${ADD_REVIEW_SUCCESS_TEXT}     timeout=10s
+    Page Should Contain         ${REVIEW_TITLE}
+    Page Should Contain         ${REVIEW_TEXT}
+
