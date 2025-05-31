@@ -18,9 +18,16 @@ Start test cases
 Click search button
     Click Element   ${SEARCH_BUTTON_LOCATOR}
 
-Verify error message
+Verify error empty message
+    [Arguments]     ${SEARCH_MESSAGE}
+    Scroll Element Into View    ${EMPTY_MESSAGE_LOCATOR}
+    Wait Until Element Is Visible    ${EMPTY_MESSAGE_LOCATOR}    5s
+    Page Should Contain     ${SEARCH_MESSAGE}
+
+Verify error invalid message
     [Arguments]     ${SEARCH_MESSAGE}
     Scroll Element Into View    ${NO_RESULT_MESSAGE_LOCATOR}
+    Wait Until Element Is Visible    ${NO_RESULT_MESSAGE_LOCATOR}    5s
     Page Should Contain     ${SEARCH_MESSAGE}
 
 Enter keyword in search field
@@ -29,7 +36,7 @@ Enter keyword in search field
 
 Verify that the product is displayed
     [Arguments]     ${PRODUCT_1}     ${PRODUCT_2}
-    Scroll Element Into View    ${PRODUCT_TITLE_LOCATOR}
+    Wait Until Page Contains    ${PRODUCT_1}        5s
     Page Should Contain     ${PRODUCT_1}        ${PRODUCT_2}
 
 

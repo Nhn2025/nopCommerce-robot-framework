@@ -16,14 +16,14 @@ Verify that user can not search with empty data
     [Documentation]     This test case verifies that user can not search with empty data
     [Tags]  Functional
     SearchPageObject.Click search button
-    SearchPageObject.Verify error message  ${EMPTY_KEYWORD_MESSAGE}
+    SearchPageObject.Verify error empty message  ${EMPTY_KEYWORD_MESSAGE}
 
 Verify that user can not search with invalid data
     [Documentation]     This test case verifies that user can not search with invalid data
     [Tags]  Functional
     SearchPageObject.Enter keyword in search field   ${INVALID_KEYWORD}
     SearchPageObject.Click search button
-    SearchPageObject.Verify error message       ${NOT_FOUND_KEYWORD_MESSAGE}
+    SearchPageObject.Verify error invalid message       ${NOT_FOUND_KEYWORD_MESSAGE}
 
 Verify that the user can search using partial keyword
     [Documentation]     This test case verifies that user can search using partial keyword
