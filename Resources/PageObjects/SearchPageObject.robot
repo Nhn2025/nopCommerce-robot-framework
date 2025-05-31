@@ -19,10 +19,11 @@ Click search button
     Click Element   ${SEARCH_BUTTON_LOCATOR}
 
 Verify error empty message
-    [Arguments]     ${SEARCH_MESSAGE}
+    [Arguments]    ${SEARCH_MESSAGE}
+    Wait Until Element Is Visible    ${EMPTY_MESSAGE_LOCATOR}    10s
     Scroll Element Into View    ${EMPTY_MESSAGE_LOCATOR}
-    Wait Until Element Is Visible    ${EMPTY_MESSAGE_LOCATOR}    5s
-    Page Should Contain     ${SEARCH_MESSAGE}
+    Element Should Be Visible    ${EMPTY_MESSAGE_LOCATOR}
+    Page Should Contain    ${SEARCH_MESSAGE}
 
 Verify error invalid message
     [Arguments]     ${SEARCH_MESSAGE}
