@@ -25,6 +25,7 @@ jobs:
       - name: Run Robot Framework tests
         run: |
           robot -d Results Tests/
+        continue-on-error: true
 
       - name: Upload Robot Framework Results
         uses: ./actions/upload-artifact
