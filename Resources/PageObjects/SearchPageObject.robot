@@ -16,6 +16,7 @@ Start test cases
     HeaderPageObject.Click search link
 
 Click search button
+    Wait Until Element Is Visible    ${SEARCH_BUTTON_LOCATOR}    10s
     Click Element   ${SEARCH_BUTTON_LOCATOR}
 
 Verify error empty message
