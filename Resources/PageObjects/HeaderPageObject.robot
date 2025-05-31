@@ -20,6 +20,7 @@ Click log out link
 
 Click new products link
     Scroll Element Into View     ${NEW_PRODUCTS_LINK}
+    Wait Until Element Is Visible    ${NEW_PRODUCTS_LINK}    5s
     Click Element   ${NEW_PRODUCTS_LINK}
 
 Click search link
