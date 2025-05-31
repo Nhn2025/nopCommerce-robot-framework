@@ -25,3 +25,9 @@ jobs:
       - name: Run Robot Framework tests
         run: |
           robot -d Results Tests/
+
+      - name: Upload Robot Framework Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: robot-framework-report
+          path: Results/
