@@ -27,8 +27,8 @@ jobs:
           robot -d Results Tests/
         continue-on-error: true
 
-      - name: Upload Robot Framework Results
-        uses: ./actions/upload-artifact
+      - name: Upload test results as artifact
+        uses: actions/upload-artifact@v3
         with:
-          name: robot-framework-report
-          path: Results/
+            name: robotframework-results
+            path: Results/
