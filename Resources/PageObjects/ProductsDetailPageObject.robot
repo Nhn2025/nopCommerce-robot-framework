@@ -29,5 +29,3 @@ Verify a review is added
     Wait Until Page Contains    ${ADD_REVIEW_SUCCESS_TEXT}     timeout=10s
     Page Should Contain         ${REVIEW_TITLE}
     Page Should Contain         ${REVIEW_TEXT}
-
-
