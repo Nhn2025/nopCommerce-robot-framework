@@ -38,6 +38,26 @@ Enter keyword in search field
     Input text      ${SEARCH_TEXTBOX_LOCATOR}    ${INVALID_KEYWORD}
 
 Verify that the product is displayed
-    [Arguments]     ${PRODUCT_1}     ${PRODUCT_2}
-    Wait Until Page Contains    ${PRODUCT_1}        5s
-    Page Should Contain     ${PRODUCT_1}        ${PRODUCT_2}
+    [Arguments]    ${PRODUCT_1}    ${PRODUCT_2}
+    Wait Until Page Contains    ${PRODUCT_1}    5s
+    Page Should Contain    ${PRODUCT_1}
+
+    Run Keyword If    '${PRODUCT_2}' != ''  Page Should Contain    ${PRODUCT_2}
+
+    ${count}=    Get Element Count    ${PRODUCT_ITEM}
+    ${expected}=    Set Variable If    '${PRODUCT_2}' != ''    2    1
+    Should Be Equal As Integers    ${count}    ${expected}
+
+Click advanced search checkbox
+    Click element   ${ADVANCED_SEARCH_CHECKBOX}
+
+Select parent category
+    [Arguments]    ${PARENT_CATEGORY}
+    Select From List By Label   ${CATEGORY_DROPDOWN}    ${PARENT_CATEGORY}
+
+Click search sub categories checkbox
+    Click element   ${SUB_CATEGORY_CHECKBOX}
+
+Select search manufacturer
+    [Arguments]    ${MANUFACTURER_NAME}
+    Select From List By Label   ${MANUFACTURER_DROPDOWN}    ${MANUFACTURER_NAME}

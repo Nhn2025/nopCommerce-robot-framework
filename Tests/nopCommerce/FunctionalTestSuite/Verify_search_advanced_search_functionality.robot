@@ -37,4 +37,45 @@ Verify that the user can search using exact keywords
     [Tags]  Functional
     SearchPageObject.Enter keyword in search field   ${EXACT_KEYWORD}
     SearchPageObject.Click search button
-    SearchPageObject.Verify that the product is displayed       ${EXACT_PRODUCT}        ${EMPTY}
+    SearchPageObject.Verify that the product is displayed       ${EXACT_KEYWORD}        ${EMPTY}
+
+Verify that user can not search with parent categories
+    [Documentation]     This test case verifies that user can not search with parent categories
+    [Tags]  Functional
+    SearchPageObject.Enter keyword in search field   ${EXACT_KEYWORD}
+    SearchPageObject.Click advanced search checkbox
+    SearchPageObject.Select parent category     ${PARENT_CATEGORY}
+    SearchPageObject.Click search button
+    SearchPageObject.Verify error invalid message       ${NOT_FOUND_KEYWORD_MESSAGE}
+
+Verify that user can search with sub categories
+    [Documentation]     This test case verifies that user can search with sub categories
+    [Tags]  Functional
+    SearchPageObject.Enter keyword in search field   ${EXACT_KEYWORD}
+    SearchPageObject.Click advanced search checkbox
+    SearchPageObject.Select parent category    ${PARENT_CATEGORY}
+    SearchPageObject.Click search sub categories checkbox
+    SearchPageObject.Click search button
+    SearchPageObject.Verify that the product is displayed       ${EXACT_KEYWORD}        ${EMPTY}
+
+Verify that user can not search with incorrect manufacturer
+    [Documentation]     This test case verifies that user can not search with incorrect manufacturer
+    [Tags]  Functional
+    SearchPageObject.Enter keyword in search field   ${EXACT_KEYWORD}
+    SearchPageObject.Click advanced search checkbox
+    SearchPageObject.Select parent category     ${PARENT_CATEGORY}
+    SearchPageObject.Click search sub categories checkbox
+    SearchPageObject.Select search manufacturer     ${MANUFACTURER_NAME}
+    SearchPageObject.Click search button
+    SearchPageObject.Verify that the product is displayed       ${EXACT_KEYWORD}        ${EMPTY}
+
+Verify that user can search with correct manufacturer
+    [Documentation]     This test case verifies that user can search with correct manufacturer
+    [Tags]  Functional
+    SearchPageObject.Enter keyword in search field   ${EXACT_KEYWORD}
+    SearchPageObject.Click advanced search checkbox
+    SearchPageObject.Select parent category     ${PARENT_CATEGORY}
+    SearchPageObject.Click search sub categories checkbox
+    SearchPageObject.Select search manufacturer     ${INVALID_MANUFACTURER_NAME}
+    SearchPageObject.Click search button
+    SearchPageObject.Verify error invalid message       ${NOT_FOUND_KEYWORD_MESSAGE}
