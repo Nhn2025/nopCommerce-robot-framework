@@ -23,5 +23,6 @@ Click new products link
     Click Element   ${PRODUCT_LINK}
 
 Click search link
-    Scroll Element Into View     ${SEARCH_LINK}
-    Click Element   ${SEARCH_LINK}
+    Wait Until Element Is Visible   ${SEARCH_LINK}    timeout=10s
+    Scroll Element Into View        ${SEARCH_LINK}
+    Click Element                   ${SEARCH_LINK}
