@@ -1,1 +1,1 @@
-PRODUCT_NAME_LINK = "xpath=//a[text()='Motorola G60']"
+PRODUCT_NAME_LINK = "xpath=//a[text()='Lenovo IdeaCentre']"

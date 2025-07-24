@@ -2,13 +2,13 @@
 ${REVIEW_TITLE}   Giá cả phải chăng
 ${REVIEW_TEXT}   Tôi rất hài lòng
 ${ADD_REVIEW_SUCCESS_TEXT}  Product review is successfully added.
-${EMPTY_KEYWORD_MESSAGE}    Search term minimum length is 3 characters
+${EMPTY_KEYWORD_MESSAGE}    Please enter some search keyword
 ${NOT_FOUND_KEYWORD_MESSAGE}    No products were found that matched your criteria.
-${INVALID_KEYWORD}  Macbook
-${PARTIAL_KEYWORD}  Redmi
-${PARTIAL_PRODUCT_1}    Xiaomi Redmi Note 14
-${PARTIAL_PRODUCT_2}    Xiaomi Redmi Note
-${EXACT_KEYWORD}     Samsung Galaxy A55
-${PARENT_CATEGORY}  Điện thoại
-${MANUFACTURER_NAME}    Samsung
+${INVALID_KEYWORD}  Supper
+${PARTIAL_KEYWORD}  Running Shoes
+${PARTIAL_PRODUCT_1}    Nike Floral Roshe Customized Running Shoes
+${PARTIAL_PRODUCT_2}    adidas Consortium Campus 80s Running Shoes
+${EXACT_KEYWORD}     Nike SB Zoom Stefan Janoski "Medium Mint"
+${PARENT_CATEGORY}  Apparel
+${MANUFACTURER_NAME}    Nike
 ${INVALID_MANUFACTURER_NAME}    Apple

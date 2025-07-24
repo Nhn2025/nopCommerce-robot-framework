@@ -26,3 +26,7 @@ Click search link
     Wait Until Element Is Visible   ${SEARCH_LINK}    timeout=10s
     Scroll Element Into View        ${SEARCH_LINK}
     Click Element                   ${SEARCH_LINK}
+
+Enter keyword in search field
+    [Arguments]     ${INVALID_KEYWORD}
+    Input text      ${SEARCH_TEXTBOX_LOCATOR}    ${INVALID_KEYWORD}

@@ -1,5 +1,5 @@
 SEARCH_BUTTON_LOCATOR = "class:search-button"
-SEARCH_TEXTBOX_LOCATOR = "class:search-text"
+SEARCH_TEXTBOX_LOCATOR = "class:search-box-text"
 NO_RESULT_MESSAGE_LOCATOR = "class:no-result"
 PRODUCT_TITLE_LOCATOR = "xpath=//h2[@class='product-title']"
 EMPTY_MESSAGE_LOCATOR = "class:warning"
