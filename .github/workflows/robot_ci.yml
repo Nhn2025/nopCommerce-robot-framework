@@ -29,7 +29,7 @@ jobs:
 
 #
       - name: Run Robot Framework tests with retry (Windows)
-        shell: pwsh
+        shell: powershell
         run: |
           robot --output output.xml --log log.html --report report.html Tests/
           if ($LASTEXITCODE -ne 0) { Write-Host "Initial run had failures" }
@@ -38,6 +38,7 @@ jobs:
           if ($LASTEXITCODE -ne 0) { Write-Host "Retry run had failures" }
 
           rebot --merge output.xml rerun.xml
+      
       #
       - name: Upload test results as artifact
         uses: actions/upload-artifact@v4
