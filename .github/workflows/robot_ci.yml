@@ -28,12 +28,17 @@ jobs:
         continue-on-error: true
 
 #
-      - name: Run Robot Framework tests with retry
+      - name: Run Robot Framework tests with retry (Windows)
+        shell: pwsh
         run: |
-          robot --output output.xml --log log.html --report report.html Tests/ || true
-          robot --rerun failed output.xml --output rerun.xml Tests/ || true
-          rebot --merge output.xml rerun.xml  
-#
+          robot --output output.xml --log log.html --report report.html Tests/
+          if ($LASTEXITCODE -ne 0) { Write-Host "Initial run had failures" }
+
+          robot --rerunfailed output.xml --output rerun.xml Tests/
+          if ($LASTEXITCODE -ne 0) { Write-Host "Retry run had failures" }
+
+          rebot --merge output.xml rerun.xml
+      #
       - name: Upload test results as artifact
         uses: actions/upload-artifact@v4
         with:
