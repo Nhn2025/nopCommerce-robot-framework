@@ -42,8 +42,11 @@ jobs:
           }
 
       #
-      - name: Upload test results as artifact
+      - name: Upload merged test results
         uses: actions/upload-artifact@v4
         with:
           name: robotframework-results
-          path: Results/
+          path: |
+            output.xml
+            log.html
+            report.html
