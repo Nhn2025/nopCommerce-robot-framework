@@ -21,7 +21,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Robot Framework tests with up to 2 retries (Windows)
-        shell: pwsh
+        shell: powershell
         run: |
           # Run 1
           robot --output output.xml --log log.html --report report.html Tests/
@@ -57,5 +57,8 @@ jobs:
           name: robotframework-results
           path: |
             output.xml
+            rerun1.xml
+            rerun2.xml
+            output-merged.xml
             log.html
             report.html
