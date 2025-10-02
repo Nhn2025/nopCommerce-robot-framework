@@ -1,0 +1,1 @@
+CLEAR_BUTTON = "class:clear-list"

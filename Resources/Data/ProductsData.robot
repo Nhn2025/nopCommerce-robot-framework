@@ -12,3 +12,9 @@ ${EXACT_KEYWORD}     Nike SB Zoom Stefan Janoski "Medium Mint"
 ${PARENT_CATEGORY}  Apparel
 ${MANUFACTURER_NAME}    Nike
 ${INVALID_MANUFACTURER_NAME}    Apple
+${SORT_OPTION}  Name: A to Z
+${ADD_WISHLIST_SUCCESS_TEXT}    The product has been added to your wishlist
+${WISHLIST_PRODUCT_NAME}     Lenovo IdeaCentre
+${EMPTY_WISHLIST_MESSAGE}   The wishlist is empty!
+${ADD_COMPARE_SUCCESS_TEXT}     The product has been added to your product comparison
+${EMPTY_COMPARE_MESSAGE}   You have no items to compare.

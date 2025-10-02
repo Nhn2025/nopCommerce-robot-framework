@@ -1,0 +1,1 @@
+PRODUCT_LIST = "css:.product-grid>div:first-of-type h2.product-title"

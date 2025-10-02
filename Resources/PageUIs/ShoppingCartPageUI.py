@@ -1,0 +1,1 @@
+REMOVE_BUTTON = "class:remove-btn"

@@ -27,7 +27,7 @@ Verify that user cannot log in with an invalid email format
     LoginPageObject.Input email and password    ${INVALID_EMAIL}       ${EMPTY}
     LoginPageObject.Click login button
     LoginPageObject.Verify error message      ${EMAIL_INVALID_TEXT}
-#
+
 Verify that user cannot log in with a valid email and invalid password
     [Documentation]     This test case verifies that login fails when using an already registered email and an invalid password
     [Tags]  Functional

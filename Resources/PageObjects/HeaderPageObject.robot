@@ -30,3 +30,13 @@ Click search link
 Enter keyword in search field
     [Arguments]     ${INVALID_KEYWORD}
     Input text      ${SEARCH_TEXTBOX_LOCATOR}    ${INVALID_KEYWORD}
+
+Click wishlist link
+    Wait Until Element Is Visible   ${WISHLIST_LINK}    timeout=10s
+    Scroll Element Into View        ${WISHLIST_LINK}
+    Click Element                   ${WISHLIST_LINK}
+
+Click recently viewed product link
+    Wait Until Element Is Visible   ${RECENTLY_PRODUCT_LINK}    timeout=10s
+    Scroll Element Into View        ${RECENTLY_PRODUCT_LINK}
+    Click Element                   ${RECENTLY_PRODUCT_LINK}
