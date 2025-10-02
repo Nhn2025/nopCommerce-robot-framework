@@ -57,8 +57,5 @@ jobs:
           name: robotframework-results
           path: |
             output.xml
-            rerun1.xml
-            rerun2.xml
-            output-merged.xml
             log.html
             report.html
