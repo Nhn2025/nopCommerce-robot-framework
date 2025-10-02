@@ -36,6 +36,7 @@ Verify that the product is displayed
     Should Be Equal As Integers    ${count}    ${expected}
 
 Click advanced search checkbox
+    Wait Until Element Is Visible    ${ADVANCED_SEARCH_CHECKBOX}    5s
     Click element   ${ADVANCED_SEARCH_CHECKBOX}
 
 Select parent category
