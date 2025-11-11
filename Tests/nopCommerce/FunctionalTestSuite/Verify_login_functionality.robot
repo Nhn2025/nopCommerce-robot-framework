@@ -7,6 +7,7 @@ Resource  ../../../Resources/PageObjects/HomePageObject.robot
 Resource  ../../../Resources/Data/LoginData.robot
 Resource  ../../../Resources/Data/CommonData.robot
 
+
 Test Setup  CommonPageObject.Start TestCase
 Test Teardown   CommonPageObject.Finish TestCase
 
