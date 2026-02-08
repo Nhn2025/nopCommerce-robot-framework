@@ -21,7 +21,7 @@ To run the tests, use the following command:
 ```robot -d results path/to/your/testFile.robot```
 ```robot -d results -v env:uat path/to/your/testFile.robot```
 
-# Parameters:
+# Parameters
 ```-d results```: This option specifies the directory where the test results will be stored. In this case, the results will be placed in a folder called results.
 ```path/to/your/testFile.robot:``` Replace this with the path to the specific .robot file or directory containing the test files you want to run.
 For example, if you want to run a test file named fileName.robot located in the Tests/... directory, use this command:
