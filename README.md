@@ -38,8 +38,6 @@ You can open these files in a web browser to view the results.
 Here's an example of what your project directory might look like:
 
 ```
-RobotFramework/
-│
 ├── .github/
 │   ├── workflows/
 │   │   ├── robot_ci.yml  # File cấu hình GitHub Actions để chạy test tự động
