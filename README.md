@@ -1,4 +1,4 @@
-# Robot Framework with Python
+# Robot Automation Framework with Python
 
 This repository contains tests written in Robot Framework for automating various tasks using Python. The tests can be run using the robot command, and the results will be stored in a specified directory for further analysis.
 
