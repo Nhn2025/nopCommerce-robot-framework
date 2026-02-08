@@ -38,36 +38,31 @@ You can open these files in a web browser to view the results.
 Here's an example of what your project directory might look like:
 
 ```
-── .github/
-│   ├── workflows/
-│   │   ├── robot_ci.yml  # File cấu hình GitHub Actions để chạy test tự động
-│
-├── Libraries/                             
-│
-├── Resources/      
-│   ├── Commons/  
-│   │   ├── CommonFunctionality.robot                      
-│   ├── Data/   
-│   │   ├── RegisterData.robot           
-│   ├── PageObjects/    
-│   │   ├── HeaderPageObject.robot  
-│   │   ├── RegisterPageObject.robot                       
-│   ├── PageUIs/  
-│   │   ├── HeaderPageUI.py  
-│   │   ├── RegisterPageUI.py
-│
-├── Results/                              
-│   ├── log.html                          
-│   ├── output.xml                        
-│   ├── report.html                       
-│
-├── Tests/                                
-│   ├── nopCommerce/
-│   │   ├── FunctionalTestSuite/  
-│   │   │   ├── Verify_register_functionality.robot     
-│
-├── README.md          
+├── .github/
+│   └── workflows/
+│       └── robot_ci.yml        # GitHub Actions workflow for CI
+├── Libraries/                  # Custom libraries
+├── Resources/                  # Shared resources
+│   ├── Commons/
+│   │   └── CommonFunctionality.robot
+│   ├── Data/
+│   │   └── RegisterData.robot
+│   ├── PageObjects/
+│   │   ├── HeaderPageObject.robot
+│   │   └── RegisterPageObject.robot
+│   └── PageUIs/
+│       ├── HeaderPageUI.py
+│       └── RegisterPageUI.py
+├── Results/                    # Test results
+│   ├── log.html
+│   ├── output.xml
+│   └── report.html
+├── Tests/                      # Test suites
+│   └── nopCommerce/
+│       └── FunctionalTestSuite/
+│           └── Verify_register_functionality.robot
+├── README.md
 ├── requirements.txt
-├── run_tests.sh              
+└── run_tests.sh            
 ```
 
